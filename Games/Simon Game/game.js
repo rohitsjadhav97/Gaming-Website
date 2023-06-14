@@ -34,7 +34,8 @@ function animatePress(currentColour){
   }, 100);
 }
 
-$(document).keydown(function(){
+$("#play").click(function(){
+  animatePress("play");
   if(!started){
     $("#level-title").text("Level "+level);
     nextSequence();

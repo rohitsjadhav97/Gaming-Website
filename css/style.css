@@ -53,10 +53,10 @@ header ul li a:hover{
     border-bottom: 3px solid #1aeeef;
     color: #1aeeef;
 }
-.active{
+/* .active{
     border-bottom: 3px solid #1aeeef;
     color: #1aeeef;
-}
+} */
 header .action .searchBx{
     padding: 5px;
     margin: 5px;
@@ -199,6 +199,7 @@ header .action .searchBx input{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     
 }
 .container .games .card{
@@ -350,6 +351,7 @@ header .action .searchBx input{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
   }
 
   .esports-info video{
@@ -390,6 +392,7 @@ header .action .searchBx input{
     display: flex;
     justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap;
     margin: 40px 10px;
   }
 
@@ -415,10 +418,105 @@ header .action .searchBx input{
     margin: 20px 0;
     display: flex;
     justify-content: space-evenly;
+
   }
 
   .player .info .social a{
     color: aqua;
     height: 50px;
     width: 50px;
+  }
+
+  ::-webkit-scrollbar{
+    width:12px;
+  }
+  ::-webkit-scrollbar-thumb{
+    background-color: #1aeeef;
+    border-radius: 6px;
+  }
+
+  @media (max-width:991px){
+    header{
+        padding: 15px 40px;
+        z-index: 10;
+    }
+    header .nav{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #1b2141;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        z-index: 2;
+    }
+    header .nav.active{
+        display: flex;
+    }
+    header .nav li{
+        margin: 20px 0;
+    }
+    header .nav li a{
+        font-size: 24px;
+        margin: 10px 0;
+    }
+
+    .toggleMenu{
+        position: relative;
+        width: 30px;
+        height: 30px;
+        background-image: url(../images/menu2.png);
+        background-position: center;
+        background-size: 30px;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        z-index: 1001;
+    }
+    .toggleMenu.active{
+        background-image: url(../images/close.png);
+        background-position: center;
+        background-size: 30px;
+        background-repeat: no-repeat;
+    }
+    .banner,.about{
+        margin-top: 100px;
+    }
+    .banner .bg img,.about img{
+        position: absolute;
+    }
+    .banner .bg .content,.about .content{
+        width: 100%;
+        height: 80%;
+        background-color: rgb(27 33 65/50%);
+        padding: 20px;
+        z-index: 1;
+        border-radius: 10px;
+    }
+    .banner .bg .content h2,.about .content h2{
+        font-size: 3em;
+    }
+    .esports{
+        margin: 100px 0;
+        flex-wrap: wrap;
+    }
+    .esports .content{
+        width: 100%;
+    }
+    h2.title{
+        margin-top: 150px;
+    }
+    .esports-info .text{
+        width: 100%;
+        text-align: center;
+    }
+    .esports-info .text p{
+        width: 100%;
+    }
+    .player .info{
+        width: 100%;
+    }
+
   }
